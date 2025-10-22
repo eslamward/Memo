@@ -108,25 +108,25 @@ const Header = () => {
               href="#"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
             >
-              Home
+              {t("home")}
             </a>
             <a
               href="#"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
             >
-              About
+              {t("about")}
             </a>
             <a
               href="#"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
             >
-              Services
+              {t("services")}
             </a>
             <a
               href="#"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
             >
-              Contact
+              {t("contact")}
             </a>
           </nav>
         </div>
