@@ -24,9 +24,10 @@ function Slider() {
         }}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 3000, // ⏱️ كل 3 ثواني
-          disableOnInteraction: false, // يكمّل بعد التفاعل
-          pauseOnMouseEnter: true, // يوقف لما تحط الماوس
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+          reverseDirection: true,
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="w-full max-w-7xl h-[70vh]"
