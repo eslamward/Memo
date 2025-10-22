@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import { useTheme } from "../hooks/useTheme";
-import { FaMoon, FaRegMoon, FaRegSun, FaSun } from "react-icons/fa";
+import { FaErlang, FaMoon, FaRegMoon, FaRegSun, FaSun } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { t, i18n } = useTranslation();
+
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "ar" : "en");
+  };
 
   return (
     <header className="bg-white dark:bg-gray-900 shadow-md dark:border-b-gray-300 border-b-[.2px]">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-2xl flex-1 font-mono  font-bold text-gray-800 dark:text-gray-100">
-          MEMO
+          {t("name")}
         </h1>
 
         {/* Desktop Menu */}
@@ -19,25 +25,25 @@ const Header = () => {
             href="#"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
           >
-            Home
+            {t("home")}
           </a>
           <a
             href="#"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
           >
-            About
+            {t("about")}
           </a>
           <a
             href="#"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
           >
-            Services
+            {t("services")}
           </a>
           <a
             href="#"
             className="text-gray-700 dark:text-gray-200 hover:text-blue-500"
           >
-            Contact
+            {t("contact")}
           </a>
         </nav>
 
@@ -69,6 +75,17 @@ const Header = () => {
               />
             )}
           </svg>
+        </button>
+        <button
+          onClick={toggleLang}
+          className="p-2 rounded-md text-[18px] text-gray-800 dark:text-gray-200 transition"
+          title="Toggle theme"
+        >
+          {i18n.language === "en" ? (
+            <p className="font-mono ">ع</p>
+          ) : (
+            <p className="font-mono ">E</p>
+          )}
         </button>
         <button
           onClick={toggleTheme}

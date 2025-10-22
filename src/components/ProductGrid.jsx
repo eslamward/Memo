@@ -4,6 +4,7 @@ import product1 from "../assets/images/1.jpg";
 import product2 from "../assets/images/2.jpg";
 import product3 from "../assets/images/3.jpg";
 import product4 from "../assets/images/4.jpg";
+import { useTranslation } from "react-i18next";
 
 const products = [
   {
@@ -37,10 +38,12 @@ const products = [
 ];
 
 function ProductGrid() {
+  const { t } = useTranslation();
+
   return (
     <section className="container mx-auto py-12 px-4 ">
       <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100 text-center">
-        Best Products
+        {t("best_products")}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -58,7 +61,7 @@ function ProductGrid() {
 
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <button className="px-6 py-2 bg-white text-gray-800 font-semibold rounded-full hover:scale-105 transition">
-                  Add to Cart
+                  {t("add_cart")}
                 </button>
               </div>
             </div>
