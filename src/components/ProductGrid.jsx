@@ -41,7 +41,7 @@ function ProductGrid() {
   const { t } = useTranslation();
 
   return (
-    <section className="container mx-auto py-12 px-4 ">
+    <section className="container mx-auto py-12 px-4  bg-background-light dark:bg-background-dark">
       <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100 text-center">
         {t("best_products")}
       </h2>

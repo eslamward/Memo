@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md dark:border-b-gray-300 border-b-[.2px]">
+    <header className="fixed top-0 right-0 left-0 z-50 h-[80px] max-h-[80px] bg-white dark:bg-gray-900 shadow-md dark:border-b-gray-300 border-b-[.2px]">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <h1 className="text-2xl flex-1 font-mono  font-bold text-gray-800 dark:text-gray-100">
           {t("name")}

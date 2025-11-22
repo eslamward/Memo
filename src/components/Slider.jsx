@@ -8,7 +8,7 @@ import images from "../assets/images/images";
 
 function Slider() {
   return (
-    <main className="container mx-auto mt-8 flex justify-center items-center">
+    <main className="container bg-background-light dark:bg-background-dark mx-auto mt-8 flex justify-center items-center">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -27,7 +27,7 @@ function Slider() {
           delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
-          reverseDirection: true,
+          reverseDirection: false,
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="w-full max-w-7xl h-[70vh]"
